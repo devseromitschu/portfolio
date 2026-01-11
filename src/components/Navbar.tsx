@@ -1,5 +1,3 @@
-import Socials from "./Socials";
-
 const links = ["/", "/posts"];
 
 function Item(props: { link: string }) {
@@ -19,9 +17,6 @@ export default function Navbar() {
         ))}
       </div>
 
-      <div className="flex items-end">
-        <Socials />
-      </div>
     </div>
   );
 }
