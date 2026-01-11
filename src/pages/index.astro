@@ -1,0 +1,66 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Lanyard from "../components/Lanyard";
+import Projects from "../components/Projects.astro";
+import Age from "../components/Age";
+import Technologies from "../components/Technologies";
+---
+
+<Layout
+  title="Hey, I'm serhat"
+  description="A software engineer and student from Samsun, Turkey."
+>
+  <div class="my-5 grid grid-cols-1 gap-5 sm:grid-cols-2">
+    <div
+      class="flex flex-col items-stretch rounded-3xl border border-white/10 bg-rose-950 sm:col-span-2 sm:flex-row"
+    >
+      <img
+        src="https://avatars.githubusercontent.com/u/254270022"
+        alt="serhat's avatar"
+        class="ml-5 mt-5 max-w-[175px] rounded-3xl object-contain object-center sm:ml-0 sm:mt-0 sm:rounded-none sm:rounded-l-3xl sm:object-cover"
+      />
+      <div class="flex flex-col p-5 sm:justify-evenly">
+        <div>
+          <div class="text-5xl font-bold tracking-tight sm:text-6xl">
+            <span>Hey, I&apos;m</span>
+            <span
+              class="bg-linear-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent"
+            >
+              serhat
+            </span>
+          </div>
+        </div>
+        <p class="mt-3">
+          A <Age client:load /> y/o software engineer and student from Samsun, Turkey. 
+          I develop both frontend and backend software. I also love to
+          explore new technologies and tools made by others.
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <Technologies client:load />
+    </div>
+
+    <div class="min-h-[200px]">
+      <Lanyard client:load />
+    </div>
+
+    <div
+      class="rounded-3xl border border-white/10 bg-green-950 p-5 sm:col-span-2"
+    >
+      <h1 class="text-3xl font-bold">What I Built 🔨</h1>
+      <p class="mt-3">
+        These are the top projects I am currently working on. You can see the
+        rest on my <a
+          href="https://github.com/devseromitschu"
+          class="text-yellow-400 underline underline-offset-4"
+          target="_blank">GitHub profile</a
+        >.
+      </p>
+      <div class="mt-5">
+        <Projects />
+      </div>
+    </div>
+  </div>
+</Layout>
